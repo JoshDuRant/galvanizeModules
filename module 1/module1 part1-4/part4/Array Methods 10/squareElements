@@ -1,0 +1,8 @@
+function squareElements(arr) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] *= arr[i];
+    newArray.push(arr[i]);
+  }
+  return newArray;
+}

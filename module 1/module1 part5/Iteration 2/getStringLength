@@ -1,0 +1,8 @@
+function getStringLength(string) {
+  // your code here
+ let count = 0;
+ for (let letter in string) {
+     count++;
+ }
+ return count;
+}

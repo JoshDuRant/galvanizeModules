@@ -1,0 +1,7 @@
+function calculateBillTotal(preTaxAndTipAmount) {
+  // your code here
+  let tipAmount = preTaxAndTipAmount * .15;
+  let taxAmount = preTaxAndTipAmount * .095;
+  let amountToBeAdded = tipAmount + taxAmount;
+  return preTaxAndTipAmount + amountToBeAdded;
+}

@@ -1,0 +1,10 @@
+function getProductOfAllElementsAtProperty(obj, key) {
+  if (obj[key] === undefined || obj[key].length === 0 || !Array.isArray(obj[key])) {
+    return 0;
+  }
+  let startingNum = obj[key][0];
+  for (let i = 1; i < obj[key].length; i++) {
+    startingNum *= obj[key][i];
+  }
+  return startingNum;
+}

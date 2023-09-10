@@ -1,0 +1,23 @@
+function findSmallestNumberAmongMixedElements(arr) {
+    if (arr === undefined || arr.length === []) {
+        return 0;
+    }
+    let newArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] !== 'number') {
+            continue;
+        } else {
+            newArray.push(arr[i]);
+        }
+    }
+    if (newArray.length === 0) {
+        return 0;
+    }
+    let smallestNumber = newArray[0];
+    for (let j = 1; j < newArray.length; j++) {
+        if (newArray[j] < smallestNumber) {
+            smallestNumber = newArray[j];
+        }
+    }
+    return smallestNumber;
+}

@@ -1,0 +1,23 @@
+function findShortestWordAmongMixedElements(arr) {
+  let newArray = [];
+  if (!Array.isArray(arr) || arr === [] || arr.length === 0) {
+    return '';
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== 'string') {
+      continue;
+    } else if (typeof arr[i] === 'string') {
+      newArray.push(arr[i]);
+    }
+  }
+  if (newArray.length === 0) {
+      return '';
+  }
+  let shortestLength = newArray[0];
+  for (let j = 1; j < newArray.length; j++) {
+    if (newArray[j].length < shortestLength.length) {
+      shortestLength = newArray[j];
+    }
+  }
+  return shortestLength;
+}

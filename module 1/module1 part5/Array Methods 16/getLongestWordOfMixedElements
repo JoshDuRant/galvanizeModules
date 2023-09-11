@@ -1,0 +1,25 @@
+function getLongestWordOfMixedElements(arr) {
+  // your code here
+  if (arr.length === 0) {
+      return "";
+  }
+  let newArray = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] !== 'string') {
+          continue;
+      } else {
+          newArray.push(arr[i]);
+      }
+  }
+  if (newArray.length === 0) {
+      return "";
+  }
+  let longestWord = newArray[0];
+  for (let j = 1; j < newArray.length; j++) {
+      if (newArray[j].length > longestWord.length) {
+          longestWord = newArray[j];
+      }
+  }
+  return longestWord;
+}

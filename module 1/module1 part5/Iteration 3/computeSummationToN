@@ -1,0 +1,18 @@
+function computeSummationToN(n) {
+  // your code here
+  if (n === 0) {
+      return 0;
+  }
+  let sum = 0;
+  
+  if (n > 0) {
+      for (let i = 1; i <= n; i++) {
+          sum += i;
+      }
+  } else {
+      for (let i = 1; i >= n; i--) {
+          sum += i;
+      }
+  }
+  return sum;
+}

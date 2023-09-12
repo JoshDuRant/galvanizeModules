@@ -1,0 +1,9 @@
+function repeatString(string, num) {
+  // your code here
+  let newArray = [];
+  for (let i = num; i >= 1; i--) {
+      newArray.push(string);
+  }
+  let newString = newArray.join('');
+  return newString;
+}

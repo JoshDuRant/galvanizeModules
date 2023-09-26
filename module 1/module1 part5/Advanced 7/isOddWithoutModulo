@@ -1,0 +1,28 @@
+function isOddWithoutModulo(num) {
+//edge cases:
+//get absolute value
+let numAbsVal = Math.abs(num);
+//if zero, return isOdd = false
+if (num === 0) {
+    return false;
+}
+//split num in half
+let halfOfNum = numAbsVal / 2;
+//turn into a string
+let numString = halfOfNum.toString();
+let isOdd = false;
+//loop through to see if there's a decimal point
+for (let x = 0; x < numString.length; x++) {
+    if (numString[x] === '.') {
+        isOdd = true;
+    }
+}
+//if there is a decimal point, return isOdd = true
+return isOdd;
+}
+
+var output = isOddWithoutModulo(17);
+console.log(output); // --> true
+
+var output = isOddWithoutModulo(-17);
+console.log(output); // --> true

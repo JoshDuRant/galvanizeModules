@@ -1,0 +1,23 @@
+function isEvenWithoutModulo(num) {
+if (num === 0) {
+    return true;
+}
+//get abs value of number
+let numAbsVal = Math.abs(num);
+//divide nuber by 2
+let halfOfNum = numAbsVal / 2;
+//turn number into a string
+let numString = halfOfNum.toString();
+let isEven = true;
+//loop over string
+for (let x = 0; x < numString.length; x++) {
+//if number has a '.', return false
+  if (numString[x] === '.') {
+    isEven = false;
+  }
+}
+return isEven;
+}
+
+var output = isEvenWithoutModulo(8);
+console.log(output); // --> true

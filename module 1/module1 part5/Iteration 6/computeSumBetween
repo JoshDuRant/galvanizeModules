@@ -1,0 +1,16 @@
+function computeSumBetween(num1, num2) {
+    // your code here
+    if (!(num2 > num1)) {
+      return 0;
+   }
+  let sumVar = 0;
+  // loop through where x = num1 and remains less than num2
+  for (let x = num1; x < num2; x++) {
+    sumVar += x;
+  }
+  // multiply it all by a product var
+  return sumVar;
+  }
+
+  var output = computeSumBetween(2, 5);
+  console.log(output); // --> 9 

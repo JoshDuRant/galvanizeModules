@@ -1,0 +1,17 @@
+function multiplyBetween(num1, num2) {
+    // your code here
+    // if num2 is not greater than num1, return 0
+    if (!(num2 > num1)) {
+        return 0;
+    }
+    let productVar = 1;
+    // loop through where x = num1 and remains less than num2
+    for (let x = num1; x < num2; x++) {
+      productVar *= x;
+    }
+    // multiply it all by a product var
+    return productVar;
+  }
+
+  var output = multiplyBetween(2, 5);
+  console.log(output); // --> 24

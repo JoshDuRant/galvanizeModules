@@ -1,0 +1,9 @@
+function fromListToObject(array) {
+  // your code here
+  let newObj = {};
+  for (let i = 0; i < array.length; i++) {
+      let key = array[i][0];
+      newObj[key] = array[i][1];
+  }
+  return newObj;
+}

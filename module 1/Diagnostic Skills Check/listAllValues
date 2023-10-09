@@ -1,0 +1,9 @@
+function listAllValues(obj) {
+  // your code here
+  let arr = [];
+  for (let key in obj) {
+      let value = obj[key];
+      arr.push(value);
+  }
+  return arr;
+}

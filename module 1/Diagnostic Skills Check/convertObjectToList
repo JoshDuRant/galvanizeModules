@@ -1,0 +1,11 @@
+function convertObjectToList(obj) {
+  // your code here
+  let newArr = [];
+  for (let key in obj) {
+      let insideArr = [];
+      let value = obj[key];
+      insideArr.push(key, value);
+      newArr.push(insideArr);
+  }
+  return newArr;
+}

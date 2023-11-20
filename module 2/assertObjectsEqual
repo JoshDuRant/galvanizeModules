@@ -1,0 +1,18 @@
+function assertObjectsEqual(actual, expected, testName) {
+  // your code here
+  let sameLength = Object.keys(actual).length === Object.keys(expected).length;
+  let sameValues = true;
+  
+  for (let key in actual) {
+      if (actual[key] !== expected[key]) {
+          sameValues = false;
+          break;
+      } 
+  }
+  
+  if (sameLength && sameValues) {
+      console.log('passed');
+  } else {
+      console.log('FAILED [' + testName + '] Expected ' + JSON.stringify(expected) + ', but got ' + JSON.stringify(actual));
+  }
+}

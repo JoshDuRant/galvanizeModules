@@ -1,0 +1,27 @@
+function addFullNameProp(obj) {
+  var firstName = obj.firstName;
+  var lastName = obj[lastName];
+
+  if (firstName && lastName) {
+    obj['fullName'] = firstName + ' ' + lastName;
+  }
+
+  return obj;
+}
+
+function assertObjectsEqual(actual, expected, testName) {
+    let sameLength = Object.keys(actual).length === Object.keys(expected).length;
+    let sameValues = true;
+    
+    for (let key in actual) {
+        if (actual[key] !== expected[key]) {
+            sameValues = false;
+            break;
+        }
+    }
+    if (sameLength && sameValues) {
+        console.log('passed');
+    } else {
+        console.log(`FAILED ${testName} Expected ${expected}, but got ${actual}.`)
+    }
+}
